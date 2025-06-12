@@ -1,0 +1,51 @@
+---
+import Button from "./Button.astro";
+const sections = [
+  { name: "INICIO", href: "/" },
+  { name: "QUIENES SOMOS", href: "/" },
+  { name: "TESTIMONIOS", href: "/" },
+  { name: "CONTACTANOS", href: "/" },
+];
+---
+
+<nav
+  class="bg-white p-4 flex justify-between items-center fixed top-0 left-0 right-0 z-50"
+>
+  <div class="flex items-center gap-3">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="text-gray-400 lg:hidden cursor-pointer"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 6l16 0"></path>
+      <path d="M4 12l16 0"></path>
+      <path d="M4 18l16 0"></path>
+    </svg>
+    <a href="/">
+      <img src="/public/images/logo.webp" alt="effectigo-logo" class="h-8" />
+    </a>
+  </div>
+  <div class="hidden lg:flex gap-0.5">
+    {
+      sections.map((section) => (
+        <a
+          href={section.href}
+          class="text-gray-600 px-4 py-2 rounded font-bold"
+        >
+          {section.name}
+        </a>
+      ))
+    }
+  </div>
+  <div class="hidden md:flex gap-5 items-center">
+    <span>¿Eres cliente?</span>
+    <Button>Iniciar Sesión</Button>
+  </div>
+</nav>
