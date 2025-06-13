@@ -12,7 +12,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center absolute top-0 left-0 right-0 z-50 bg-white p-4 shadow-sm h-15">
+    <nav className="flex justify-between items-center absolute top-0 left-0 right-0 z-50 bg-white p-4 shadow-sm">
       <a href="/">
         <img src="/images/logo.webp" alt="effectigo-logo" className="h-8" />
       </a>
