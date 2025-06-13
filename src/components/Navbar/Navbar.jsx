@@ -22,7 +22,7 @@ export default function Navbar() {
           <a
             key={section.name}
             href={section.href}
-            className="text-gray-600 px-4 py-2 font-bold"
+            className="text-gray-600 px-4 py-2 font-medium"
           >
             {section.name}
           </a>
