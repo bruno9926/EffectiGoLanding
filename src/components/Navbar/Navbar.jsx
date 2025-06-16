@@ -12,7 +12,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center absolute top-0 left-0 right-0 z-50 bg-white p-4 shadow-sm">
+    <nav className="flex justify-between items-center fixed top-0 left-0 right-0 z-40 bg-white p-4 shadow-sm">
       <a href="/">
         <img src="/images/logo.webp" alt="effectigo-logo" className="h-8" />
       </a>
@@ -86,7 +86,7 @@ const CloseIcon = () => (
 const MenuMobile = ({ isOpen, setMenuOpen }) => {
   return (
     <div
-      className={`lg:hidden absolute p-5 top-0 left-0 w-screen h-screen bg-white border border-gray-200 z-40 transition-all duration-400 ease-in-out
+      className={`lg:hidden fixed p-5 top-0 left-0 w-screen h-screen bg-white border border-gray-200 z-50 transition-all duration-400 ease-in-out
         ${
           isOpen
             ? "translate-x-0 pointer-events-auto"
