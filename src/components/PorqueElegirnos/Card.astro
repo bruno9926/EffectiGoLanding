@@ -12,13 +12,13 @@ const { title, description, image, imageAlt = "Ícono", info } = Astro.props;
   >
   </div>
   <div
-    class="relative w-80 h-99 z-20 rounded-3xl bg-white border border-[#dddddd] p-8 pt-10 pb-10"
+    class="relative w-80 h-98 z-20 rounded-3xl bg-white border border-[#dddddd] p-8 pt-10 pb-10"
   >
     <div class="w-20 h-20 mb-6">
       <img src={image} alt={imageAlt} />
     </div>
     <h2 class="text-2xl font-bold mb-4 w-40">{title}</h2>
     <p class="text-base text-[#222]">{description}</p>
-    {info && <p class="text-base text-[#222] mt-4 text-[12px]">{info}</p>}
+    {info && <p class="text-base text-[#222] mt-3 text-[12px]">{info}</p>}
   </div>
 </div>
