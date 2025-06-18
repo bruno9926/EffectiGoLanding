@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection/HeroSection.astro";
 import PorqueElegirnos from "../components/PorqueElegirnos/PorqueElegirnos.astro";
+import FAQs from "../components/FAQs/FAQs.jsx";
 ---
 
 <Layout>
   <HeroSection />
   <PorqueElegirnos />
+  <FAQs client:load />
 </Layout>
