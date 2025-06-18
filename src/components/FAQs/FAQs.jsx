@@ -41,38 +41,48 @@ export default function FAQs() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-center mb-8">Preguntas <span className="text-[#E62828]">Frecuentes</span></h2>
-      <div>
-        {faqsData.map((faq, index) => (
-          <div
-            key={faq.id}
-            className="border-b border-gray-200 overflow-hidden"
-          >
-            <button
-              type="button"
-              className="w-full p-6 text-left flex justify-between items-center hover:text-[#E62828] transition-colors"
-              onClick={() => handleClick(index)}
-              aria-expanded={activeIndex === index}
+    <div className="relative w-full ">
+      <img
+        src="/public/images/red-line.svg"
+        alt="red line"
+        className="absolute top-0 right-0 w-70 z-0 pointer-events-none"
+        style={{ userSelect: "none" }}
+      />
+      <div className="relative z-10 max-w-3xl mx-auto py-30 md:py-12 px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Preguntas <span className="text-[#E62828]">Frecuentes</span>
+        </h2>
+        <div>
+          {faqsData.map((faq, index) => (
+            <div
+              key={faq.id}
+              className="border-b border-gray-200 overflow-hidden"
             >
-              <span className="font-medium text-lg">{faq.question}</span>
-              <span 
-                className={`w-4 h-4 border-r-2 border-b-2 border-gray-600 transform transition-transform duration-200 ${
-                  activeIndex === index ? 'rotate-45 translate-y-1' : '-rotate-45'
+              <button
+                type="button"
+                className="w-full p-6 text-left flex justify-between items-center hover:text-[#E62828] transition-colors"
+                onClick={() => handleClick(index)}
+                aria-expanded={activeIndex === index}
+              >
+                <span className="font-medium text-lg">{faq.question}</span>
+                <span 
+                  className={`w-4 h-4 border-r-2 border-b-2 border-gray-600 transform transition-transform duration-200 ${
+                    activeIndex === index ? 'rotate-45 translate-y-1' : '-rotate-45'
+                  }`}
+                />
+              </button>
+              <div 
+                className={`overflow-hidden transition-all duration-200 ${
+                  activeIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
-              />
-            </button>
-            <div 
-              className={`overflow-hidden transition-all duration-200 ${
-                activeIndex === index ? 'max-h-96' : 'max-h-0'
-              }`}
-            >
-              <div className="p-6">
-                <p className="text-gray-600">{faq.answer}</p>
+              >
+                <div className="p-6">
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
