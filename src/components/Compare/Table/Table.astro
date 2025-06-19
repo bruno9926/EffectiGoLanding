@@ -1,0 +1,86 @@
+---
+const tableData = {
+  headers: ["Características", "Banco", "Payday Loans", "EffectiGo"],
+  rows: [
+    ["Revisión de crédito", "✅", "No siempre", "❌"],
+    [
+      "Tiempo para recibir dinero",
+      "Varios días",
+      "En minutos",
+      "En minutos ⚡",
+    ],
+    ["Comisiones ocultas", "A veces", "Muy frecuentes", "❌"],
+    [
+      "Flexibilidad de pago",
+      "Poca",
+      "Muy limitada",
+      "Pagas en 2, 6 u 8 semanas",
+    ],
+    ["Atención en español", "❌ No garantizado", "❌ No garantizado", "✅"],
+    [
+      "Monto típico de préstamos",
+      "+ $1,000 USD",
+      "Muy pequeños",
+      "Entre $100 y $1,000 USD",
+    ],
+  ],
+};
+---
+
+<div class="overflow-x-auto mb-10 w-[95vw] max-w-5xl">
+  <div class="border border-[#D9D9D9] rounded-xl overflow-auto">
+    <table
+      class="min-w-full text-left border-collapse rounded-3xl text-xs md:text-sm lg:text-lg"
+    >
+      <thead>
+        <tr class="bg-[#f1f1f1]">
+          {
+            tableData.headers.map((header, index) => (
+              <th
+                class:list={[
+                  "p-2 px-5 md:p-4 md:px-5 lg:p-6",
+                  "font-bold",
+                  "text-md md:text-lg lg:text-xl",
+                  "border-b",
+                  "border-[#D9D9D9]",
+                  "max-w-[150px]",
+                  {
+                    "sticky bg-[#f1f1f1] left-0 z-10": index === 0,
+                    "bg-[#d4f1cc]": index === tableData.headers.length - 1,
+                  },
+                ]}
+              >
+                {header}
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          tableData.rows.map((row) => (
+            <tr>
+              {row.map((cell, colIndex) => (
+                <td
+                  class:list={[
+                    "p-3 md:p-4 lg:p-5 lg:px-6",
+                    "border-b",
+                    "border-[#D9D9D9]",
+                    "max-w-[150px]",
+                    {
+                      "sticky left-0 z-0": colIndex === 0,
+                      "bg-green-50": colIndex === row.length - 1,
+                      "bg-white": colIndex !== row.length - 1
+                    },
+                  ]}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
