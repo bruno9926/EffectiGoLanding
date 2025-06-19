@@ -1,0 +1,64 @@
+---
+import Stat from "./Stat.astro";
+import Testimony from "./Testimony.astro";
+
+const testimonies = [
+    {
+        testimonyText: "Soy handyman y no podía esperar hasta el viernes para cobrar. EfectiGo me resolvió en minutos y pude pagar la consulta de mi hijo. Súper fácil y rápido.",
+        userName: "Marcos Gil",
+        userLocation: "Miami, FL",
+        userImage: "/public/images/testimonies/marco.webp"
+    },
+    {
+        testimonyText: "Esta es la historia de otro cliente, y de como supero sus problemas gracias a usar la plataforma EffectiGo",
+        userName: "Maria Garcia",
+        userLocation: "Huston, TX",
+        userImage: "/public/images/testimonies/maria.webp"
+    },
+    {
+        testimonyText: "Esta es la historia de un cliente, y de como supero sus problemas gracias a usar la plataforma EffectiGo",
+        userName: "Horacio Perez",
+        userLocation: "Orlando, FL",
+        userImage: "/public/images/testimonies/horacio.webp"
+    }
+]
+---
+
+<section class="flex flex-col items-center gap-2 md:gap-6 px-2 mb-0 mt-10 md:my-15">
+  <h2
+    id="quienes-somos"
+    class:list={[
+        "font-bold text-3xl mb-0 p-0 text-center",
+        "md:text-4xl md:px-3",
+        "lg:max-w-3xl lg:mb-3"
+    ]}
+  >
+    <span>Esto dicen nuestros clientes</span>
+  </h2>
+  <!-- testimonies -->
+  <div class:list={[
+    "flex flex-col flex-grap justify-between gap-5",
+    "md:flex-row md:gap-0 lg:gap-10",
+  ]}>
+    {testimonies.map((testimony) => (
+      <Testimony
+        testimonyText={testimony.testimonyText}
+        userName={testimony.userName}
+        userLocation={testimony.userLocation}
+        userImage={testimony.userImage}
+      />
+    ))}
+  </div>
+  <div class="flex w-full justify-between max-w-5xl">
+
+  </div>
+  <!-- stats -->
+  <div class:list={[
+    "flex flex-col gap-10 justify-between max-w-5xl",
+    "md:w-full md:flex-row md:gap-0"
+  ]}>
+    <Stat title="Vidas apoyadas" value="500+" />
+    <Stat title="Préstamos entregados" value="1000+" />
+    <Stat title="Años dando la mano" value={5} />
+  </div>
+</section>
