@@ -60,13 +60,13 @@ export default function FAQs() {
             >
               <button
                 type="button"
-                className="w-full p-6 text-left flex justify-between items-center hover:text-[#E62828] transition-colors"
+                className="w-full p-6 text-left flex justify-between items-center hover:text-[#E62828] transition-colors cursor-pointer group"
                 onClick={() => handleClick(index)}
                 aria-expanded={activeIndex === index}
               >
                 <span className="font-medium text-lg">{faq.question}</span>
                 <span 
-                  className={`w-4 h-4 border-r-2 border-b-2 border-gray-600 transform transition-transform duration-200 ${
+                  className={`w-4 h-4 border-r-2 border-b-2 border-gray-600 transform transition-transform duration-200 group-hover:border-[#E62828] ${
                     activeIndex === index ? 'rotate-45 translate-y-1' : '-rotate-45'
                   }`}
                 />
