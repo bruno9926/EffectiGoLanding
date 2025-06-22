@@ -48,7 +48,7 @@ export default function FAQs() {
         className="absolute top-0 right-0 w-70 z-0 pointer-events-none"
         style={{ userSelect: "none" }}
       />
-      <div className="relative z-10 max-w-3xl mx-auto py-30 lg:py-12 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-3xl mx-auto pt-35 pb-10 lg:py-12 px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-8">
           Preguntas <span className="text-[#E62828]">Frecuentes</span>
         </h2>

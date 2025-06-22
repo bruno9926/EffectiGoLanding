@@ -1,5 +1,4 @@
 ---
-import Layout from "../../layouts/Layout.astro";
 import Card from "./Card.astro";
 
 const cards = [
@@ -30,36 +29,36 @@ const cards = [
 ];
 ---
 
-  <div class="flex flex-col flex-wrap max-w-7xl mx-auto my-10">
-    <div class="flex flex-col text-center">
-      <h1 class="text-[32px] px-4 md:text-[48px] font-bold">
-        ¿Por qué elegir EffectiGo?
-      </h1>
-      <h2 class="text-[24px] px-4 pt-4 md:text-[30px]">
-        Diseñamos un avance en efectivo perfecto para ti
-      </h2>
-    </div>
-
-    <div class="flex flex-col justify-between mt-10 md:flex-row flex-wrap">
-      {cards.map((card) => <Card {...card} />)}
-    </div>
-
-    <a
-      href="#"
-      class="flex flex-row justify-center items-center gap-2 my-10 text-[24px] font-semibold text-[#E62828] hover:scale-105 transition-all duration-200"
-      >Descubrelo con nosotros <svg
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"
-        ></path></svg
-      ></a
-    >
+<div class="flex flex-col flex-wrap max-w-7xl mx-auto my-10">
+  <div class="flex flex-col text-center">
+    <h1 class="text-[32px] px-4 md:text-[48px] font-bold">
+      ¿Por qué elegir EffectiGo?
+    </h1>
+    <h2 class="text-[24px] px-4 pt-4 md:text-[30px]">
+      Diseñamos un avance en efectivo perfecto para ti
+    </h2>
   </div>
+
+  <div class="flex flex-col justify-between mt-10 md:flex-row flex-wrap">
+    {cards.map((card) => <Card {...card} />)}
+  </div>
+
+  <a
+    href="#"
+    class="flex flex-row justify-center items-center gap-2 my-2 text-[24px] font-semibold text-[#E62828] hover:scale-105 transition-all duration-200"
+    >Descubrelo con nosotros <svg
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"
+      ></path></svg
+    ></a
+  >
+</div>
