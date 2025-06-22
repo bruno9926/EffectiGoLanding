@@ -1,0 +1,41 @@
+---
+interface Props {
+  testimonyText: string;
+  userName: string;
+  userLocation: string;
+  userImage?: string;
+}
+
+const { testimonyText, userName, userLocation, userImage }: Props = Astro.props;
+---
+
+<div
+  class:list={[
+    "bg-white",
+    "flex flex-col max-w-100 min-w-50 rounded-lg border border-[#DDD] shadow-sm text-center",
+    "gap-5 p-5 pt-8 m-3",
+    "relative",
+  ]}
+>
+  <img
+    src="/public/images/quote.svg"
+    alt="quote"
+    class="absolute -top-5 -left-3 w-10 h-10"
+  />
+  <span>{testimonyText}</span>
+  <div class="flex flex-col text-sm items-center">
+    <div class="rounded-full w-15 h-15 bg-gray-300 mb-1">
+      {
+        userImage && (
+          <img
+            src={userImage}
+            alt={userName}
+            class="w-full h-full object-cover rounded-full"
+          />
+        )
+      }
+    </div>
+    <span class="font-bold">{userName}</span>
+    <span>{userLocation}</span>
+  </div>
+</div>
