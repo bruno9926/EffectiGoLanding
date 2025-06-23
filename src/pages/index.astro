@@ -8,15 +8,37 @@ import Contact from "../components/Contact/Contact.astro";
 import Compare from "../components/Compare/Compare.astro";
 import Clients from "../components/Clients/Clients.astro";
 import Map from "../components/Map/Map.astro";
+import FadeUp from "../components/FadeUp/FadeUp.astro";
+
+import "aos/dist/aos.css";
 ---
 
 <Layout>
   <HeroSection />
-  <PorqueElegirnos />
-  <QuienesSomos />
-  <Clients />
-  <Compare />
-  <FAQs client:load />
-  <Contact />
-  <Map />
+  <FadeUp>
+    <PorqueElegirnos />
+  </FadeUp>
+  <FadeUp>
+    <QuienesSomos />
+  </FadeUp>
+  <FadeUp>
+    <Clients />
+  </FadeUp>
+  <FadeUp>
+    <Compare />
+  </FadeUp>
+  <FadeUp>
+    <FAQs client:load />
+  </FadeUp>
+  <FadeUp>
+    <Contact />
+  </FadeUp>
+  <FadeUp>
+    <Map />
+  </FadeUp>
+
+  <script>
+    import AOS from "aos";
+    AOS.init();
+  </script>
 </Layout>
