@@ -41,7 +41,7 @@ export default function FAQs() {
   };
 
   return (
-    <div className="relative w-full ">
+    <section className="relative w-full">
       <img
         src="/public/images/red-line.svg"
         alt="red line"
@@ -84,6 +84,6 @@ export default function FAQs() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
