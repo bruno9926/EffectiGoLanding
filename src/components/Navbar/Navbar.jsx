@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center fixed top-0 left-0 right-0 z-40 bg-white p-4 shadow-sm">
       <a href="/">
-        <img src="/images/logo.webp" alt="effectigo-logo" className="h-8" />
+        <img src="/images/logo.webp" alt="efectigo-logo" className="h-8" />
       </a>
 
       <div className="hidden lg:flex gap-0.5">
