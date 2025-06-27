@@ -43,7 +43,7 @@ export default function FAQs() {
   return (
     <section className="relative w-full">
       <img
-        src="/public/images/red-line.svg"
+        src="/images/red-line.svg"
         alt="red line"
         className="absolute top-0 right-0 w-70 z-0 pointer-events-none"
         style={{ userSelect: "none" }}
