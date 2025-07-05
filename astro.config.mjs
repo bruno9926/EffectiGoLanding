@@ -1,18 +1,19 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-
+import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
-import react from '@astrojs/react';
+import relativeLinks from 'astro-relative-links';
 
-// https://astro.build/config
 export default defineConfig({
+  base: '',
+  build: {
+    format: 'file'
+  },
   vite: {
     plugins: [tailwindcss()],
     server: {
-      allowedHosts: ["8aed-191-104-198-143.ngrok-free.app"]
+      allowedHosts: ["9fda-191-104-198-143.ngrok-free.app"]
     }
   },
-
-  integrations: [react()]
+  integrations: [react(), relativeLinks()]
 });
