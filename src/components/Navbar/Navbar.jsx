@@ -3,7 +3,7 @@ import Button from "../Button/Button.jsx";
 
 const sections = [
   { name: "INICIO", href: "#inicio" },
-  { name: "QUIENES SOMOS", href: "#quienes-somos" },
+  { name: "QUIÉNES SOMOS", href: "#quienes-somos" },
   { name: "TESTIMONIOS", href: "#testimonios" },
   { name: "CONTACTANOS", href: "#contactanos" },
 ];
@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center fixed top-0 left-0 right-0 z-40 bg-white p-4 shadow-sm">
       <a href="/">
-        <img src="/images/logo.webp" alt="efectigo-logo" className="h-8" />
+        <img src="/images/logo.png" alt="efectigo-logo" className="h-8" />
       </a>
 
       <div className="hidden lg:flex gap-0.5">
@@ -30,8 +30,7 @@ export default function Navbar() {
       </div>
 
       <div className="hidden lg:flex gap-5 items-center">
-        <span>¿Eres cliente?</span>
-        <Button>Iniciar Sesión</Button>
+        <Button url="https://www.efectigo.co/signin/">Área Privada</Button>
       </div>
 
       <button

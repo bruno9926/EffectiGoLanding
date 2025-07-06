@@ -1,8 +1,8 @@
 import React from "react";
 
-const Button = ({ children }) => {
+const Button = ({ children, url }) => {
   return (
-    <button
+    <a href={url}
       className={[
         "p-2 px-5 rounded-3xl cursor-pointer shadow-lg",
         "text-white font-medium",
@@ -10,7 +10,7 @@ const Button = ({ children }) => {
       ].join(" ")}
     >
       {children}
-    </button>
+    </a>
   );
 };
 
